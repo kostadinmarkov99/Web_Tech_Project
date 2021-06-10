@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<style>
+    .add-form {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  display: block;
+}
+
+</style>
+  </head>
+
+  <body>
+    <div class="add-form">
+      <form class="form-inline" action="/contact" method="POST" autocomplete="off">
+        <input type="hidden" name="_id" value="{{contact._id}}">
+        <div class="form-group">
+          <label>Име：</label>
+          <input type="text" class="form-control" name="fullName" placeholder="Full Name" maxlength="99" value="{{contact.fullName}}"/>
+        </div>
+        <div class="form-group">
+          <label>Телефонен номер：</label>
+          <input type="text" class="form-control" name="phoneNumber" placeholder="xxx-xxxx-xxxx" value="{{contact.phoneNumber}}"/>
+        </div>
+        <div class="form-group">
+          <label>E-mail：</label>
+          <input type="text" id="email" class="form-control" name="email" placeholder="email@example.com" value="{{contact.email}}"/>
+        </div>
+        <div class="form-group">
+          <label>Адрес：</label>
+          <input type="text" id="address" class="form-control" name="addressName" placeholder="Address" value="{{contact.address}}"/>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-info" name="addNewContact">Добави</button>
+          <a class="btn btn-secondary" href="/contact/list">Обратно</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
