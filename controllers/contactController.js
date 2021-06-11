@@ -67,10 +67,10 @@ router.get("/:id", (req, res) => {
     })
 });
 
-router.get('delete/:id', (req, res) => {
+router.get('/delete/:id', (req, res) => {
     Contact.findByIdAndRemove(req.params.id, (err, doc) => {
         if(!err){
-            res.redirect("contact/list");
+            res.render("contact/list");
         } else{
             console.log("Error in the deletion: " + err);
         }
