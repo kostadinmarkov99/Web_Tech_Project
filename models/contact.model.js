@@ -6,7 +6,7 @@ var contactSchema = new mongoose.Schema({
         required: 'This field is required'
     },
     phoneNumber: {
-        type: Number,
+        type: String,
         required: 'This field is required'
     },
     email: {
