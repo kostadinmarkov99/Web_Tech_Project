@@ -17,7 +17,7 @@ app.use(bodyparser.urlencoded({extended: false}));
 app.use(bodyparser.json());
 
 app.get('/', (req, res) => {
-    res.render('contact/list', {
+    res.render('welcome', {
         viewTitle: 'Insert Contact'
     });
 });

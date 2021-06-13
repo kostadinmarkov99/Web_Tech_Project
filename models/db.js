@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/PhoneBookDB', {
+//mA47tzVE9P3LTKSK
+//var url = 'mongodb+srv://kostadinmarkov:mA47tzVE9P3LTKSK@phonebook.ilxpq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
+mongoose.connect("mongodb+srv://kostadinmarkov:mA47tzVE9P3LTKSK@phonebook.ilxpq.mongodb.net/PhoneBookDB" , {
     useNewUrlParser: true,
      useUnifiedTopology: true
 }, 
